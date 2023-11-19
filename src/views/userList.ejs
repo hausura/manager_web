@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/list.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Name</th>
+            <th>Password</th>
+        </tr>
+        <% for (let i = 0; i < userList.length; i++) {%>
+            <tr>
+                <td><%= userList[i].id %></td>
+                <td><%= userList[i].email %></td>
+                <td><%= userList[i].name %></td>
+                <td><%= userList[i].password %></td>
+                <td>
+                    <a href="/update/<%= userList[i].id %>"><button>Edit</button></a>
+                    <a href="/delete/<%= userList[i].id %>"><button>Del</button></a>
+                </td>
+            </tr>
+        <%}%>.
+    </table> 
+    <form action="/">
+        <button>HOME</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<style>
+fieldset {
+  background-color: #eeeeee;
+}
+
+legend {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+}
+
+input {
+  margin: 5px;
+}
+</style>
+
+
+<h1>Edit user info</h1>
+               
+<form action="/update-user" method="post">
+ <fieldset>
+  <legend>Personalia:</legend>
+
+  <label >ID:</label>
+  <input type="text"  value="<%= user.id %>" name="id"><br><br>
+
+  <label >Email:</label>
+  <input type="email"  value="<%= user.email %>" name="email"><br><br>
+
+  <label >Name:</label>
+  <input type="text" name="name" value="<%= user.name %>"><br><br>
+
+  <label >Password:</label>
+  <input type="text" name="password" value="<%= user.password%>"><br><br>
+
+  <button>sub</button>
+ </fieldset>
+</form>
+
+
+
+    <div class="container" style="background-color:#f1f1f1">
+        <a href="/list"><button type="button" class="cancelbtn">Cancel</button></a>
+
+    </div>
+
+
+
+
+    
+
+    
+</body>
+</html>
